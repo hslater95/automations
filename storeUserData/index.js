@@ -1,8 +1,8 @@
 const { google } = require('googleapis');
-const clientEmail = "placeholder";
-const privateKey = "placeholder";
-const googleSheetId = "placeholder";
-const googleSheetPage  "placeholder";
+const clientEmail = process.env.clientEmail;
+const privateKey = process.env.privateKey;
+const googleSheetId = process.env.googleSheetId;
+const googleSheetPage = process.env.googleSheetPage;
 const googleAuth = new google.auth.JWT(
     clientEmail,
     null,
