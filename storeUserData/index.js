@@ -11,8 +11,6 @@ const googleAuth = new google.auth.JWT(
 );
 const sheets = google.sheets({ version: 'v4', auth: googleAuth });
 
-
-
 function appendData(data = 'testing') {
     sheets.spreadsheets.values.append({
         spreadsheetId: googleSheetId,
@@ -29,3 +27,4 @@ function appendData(data = 'testing') {
     });
 }
 
+exports.handler = appendData;
